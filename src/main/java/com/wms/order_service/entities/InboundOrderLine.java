@@ -5,28 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
 import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OrderEntity {
-
+public class InboundOrderLine {
     private UUID uuid;
-
-    private String number;
-
-    private String type;
-
-    private String customer;
-
+    private UUID batchLineId;
+    private OrderEntity order;
+    private Integer quantity;
     private String status;
-
-    private Date createdAt;
-
-    private Date updatedAt;
-
-    private Date completedAt;
 }

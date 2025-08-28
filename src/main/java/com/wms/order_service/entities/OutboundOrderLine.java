@@ -11,9 +11,10 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OrderItemEntity {
+public class OutboundOrderLine {
     private UUID uuid;
-    private UUID batchItemUuid;
+    private UUID batchLineId;
+    private OrderEntity order;
     private Integer quantity;
     private String status;
 }
