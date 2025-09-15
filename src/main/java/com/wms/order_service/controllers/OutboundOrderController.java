@@ -1,13 +1,13 @@
 package com.wms.order_service.controllers;
 
-import com.wms.order_service.services.OrderItemService;
+import com.wms.order_service.services.OutboundOrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/order-item")
+@RequestMapping("/api/v1/order/outbound")
 @RequiredArgsConstructor
-public class OrderItemController {
-    private final OrderItemService orderItemService;
+public class OutboundOrderController {
+    private final OutboundOrderService orderService;
 }

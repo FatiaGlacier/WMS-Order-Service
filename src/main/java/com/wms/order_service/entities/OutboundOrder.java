@@ -5,14 +5,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-public class OutboundOrderLine {
+public class OutboundOrder extends OrderCore {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     UUID uuid;
-    UUID orderUUID;
-    UUID packagingUnitUUID;
-    Integer quantity;
+    String destination;
+    UUID carrierUUID;
+    LocalDateTime plannedShipmentDate;
+    LocalDateTime shippedDate;
 }
